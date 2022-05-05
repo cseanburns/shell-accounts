@@ -5,6 +5,9 @@
 ## Purpose: Batch remove user accounts on Linux server
 ## Remove same accounts created with the create_accounts script
 
+# Make Bash history files removable
+chattr -a /home/*/.bash_history
+
 # Assign user list to variable
 # Each line in user_list_file.csv has one username
 userfile="user_list_file.csv"
