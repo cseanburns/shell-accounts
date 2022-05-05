@@ -1,17 +1,31 @@
 #!/usr/bin/env bash
 #
-# Date: February 1, 2021
-# Author: Sean Burns
-# Create new shell accounts on Linux server.
-# Generate MySQL source file to create accounts, databases, etc
-# Dependencies: diceware. MySQL is not necessary. The script only generates a
-# source file for MySQL
-# Data source: A single text file containing user account names in one column
-#   filename is: user_list_file.csv
+# Date: February 1, 2021 Author: Sean Burns
 #
-# Usage: ./makeaccounts group_name
+# Purpose:
+# 1. Create shell accounts on Linux server.
+# 2. Generate a MySQL source file to create MySQL accounts, databases, etc
 #
-# group_name is a name that new accounts will be assigned to
+# Dependencies:
+# 1. ``diceware``.
+# 2. The script only generates a source file for MySQL. Therefore, MySQL is not
+# necessary for this script, but it is necessary to run the scripts produced by
+# this one.
+#
+# Data source:
+# A single text file containing user account names in one column.
+# For my purposes, these are student usernames save in a file named:
+#
+#     user_list_file.csv
+#
+# Usage:
+#
+#   ./makeaccounts group_name
+#
+# group_name is a name that new accounts will be assigned to.
+# I put students in their own group to control access
+# to the server for that group.
+# Make sure group name exists prior to running this script.
 
 ##########################
 # Make sure diceware is installed
