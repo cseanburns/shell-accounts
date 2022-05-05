@@ -46,3 +46,10 @@ since not all new shell users need MySQL accounts.
 I run this script at the end of the semester,
 when all work has been completed and grades have been submitted,
 to clear out the semester's users.
+
+## remove_mysql_setups
+
+This script is unfinished.
+I've generally just logged into MySQL via phpMyAdmin,
+selected all the relevant databases and users,
+and deleted them there.
